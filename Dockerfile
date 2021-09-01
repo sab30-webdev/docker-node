@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json .
 
 ARG NODE_ENVI
-RUN if [ "$NODE_ENVI" = "development" ]; \
+RUN if [ "$NODE_ENV" = "development" ]; \
         then npm install; \
         else npm install --only=production; \
         fi
